@@ -69,7 +69,7 @@ public class Partida {
 
             int opcao;
 
-            System.out.println("Turmo: " + this.turnos + ". Derrote o dragão " + this.dragao.getNome() + " (PVD: "
+            System.out.println("Turno: " + this.turnos + ". Derrote o dragão " + this.dragao.getNome() + " (PVD: "
                     + this.dragao.getPontosVida() + ")");
             System.out.println("1. Atacar");
             System.out.println("2. Defender");
@@ -81,7 +81,7 @@ public class Partida {
 
             if (opcao == 1) {
                 personagem.atacar(this.dragao);
-                this.ataqueLog(personagem.getNome(), personagem.getDano(), this.dragao.getDefesa());
+                this.ataqueLog(personagem.getNome(), personagem.getDano(), this.dragao.getPontosVida());
             } else {
                 personagem.defender();
                 this.defesaLog(personagem.getNome(), personagem.getBonusDefesa(), personagem.getDefesa());
